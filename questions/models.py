@@ -28,7 +28,7 @@ class Answer(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     # user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name='answers')
     user_id = 1
-    likes = models.FloatField()
+    likes = models.FloatField(null=True, blank=True)
 
     def __str__(self):
         return f"Answer to {self.question_id.name}"
